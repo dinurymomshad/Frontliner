@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frontliner/views/screens/home_screen.dart';
 import 'package:frontliner/views/styles/color.dart';
 import 'package:frontliner/views/styles/textstyle.dart';
+import 'package:nb_utils/nb_utils.dart';
 import '../../constants.dart';
 import 'login_screen.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -19,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   init() async {
     Future.delayed(Duration(seconds: 2), () async {
-      context.nextReplacementPage(LoginScreen());
+      context.nextReplacementPage(await getBool(LOGGED_IN, defaultValue: false) ? HomeScreen() : LoginScreen());
     });
   }
 

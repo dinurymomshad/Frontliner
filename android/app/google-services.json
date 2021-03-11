@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1009356519063",
+    "project_id": "frontliner-demo",
+    "storage_bucket": "frontliner-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009356519063:android:e88b83ee9e99d67c9b9bd2",
+        "android_client_info": {
+          "package_name": "com.frontliner.frontliner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009356519063-7tbeol22626ohq0rtnvq3o3gqj6d7dr0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frontliner.frontliner",
+            "certificate_hash": "0c88cbbe8de1345f5093ecbd298125eb79ef9492"
+          }
+        },
+        {
+          "client_id": "1009356519063-jv8rir4b8tum3kc2e5nvooumobf6g2hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChQiwohb2l_vNC6pFkv1RXgQZRCTKKsUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009356519063-jv8rir4b8tum3kc2e5nvooumobf6g2hb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
