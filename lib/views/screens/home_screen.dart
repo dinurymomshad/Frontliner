@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:frontliner/constants.dart';
 import 'package:frontliner/model/drawer_items_model.dart';
 import 'package:frontliner/model/home_screen_options_model.dart';
+import 'package:frontliner/views/screens/job_screen.dart';
 import 'package:frontliner/views/screens/login_screen.dart';
 import 'package:frontliner/views/screens/my_news_screen.dart';
 import 'package:frontliner/views/styles/color.dart';
@@ -70,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             leading: DrawerItemsModel.items[index].optionIcon,
                             onTap: () async {
                               if (index <= 6)
-                                toast("${DrawerItemsModel.items[index].optionName} Clicked");
+                                toast("${DrawerItemsModel.items[index].optionName} Clicked", length: Toast.LENGTH_SHORT);
                               else {
                                 setBool(LOGGED_IN, false);
                                 await FirebaseAuth.instance.signOut();
@@ -89,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.notifications, color: kPrimaryColor),
           onPressed: () {
-            toast("Notification Pressed");
+            toast("Notification Pressed", length: Toast.LENGTH_SHORT);
           },
         ),
         body: Container(
@@ -125,10 +126,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ).onInkTap(() {
-                        if (index != 3) {
-                          toast(HomeScreenOptionsModel.items[index].optionName + " selected");
-                        } else {
+                        if (index == 1) {
+                          context.nextPage(JobSearchScreen());
+                        } else if (index == 3) {
                           context.nextPage(MyNewsScreen());
+                        } else {
+                          toast(HomeScreenOptionsModel.items[index].optionName + " selected", length: Toast.LENGTH_SHORT);
                         }
                       });
                     }),
