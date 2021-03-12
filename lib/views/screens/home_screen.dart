@@ -94,7 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Container(
           height: context.screenSize.height,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/Cute Nurse.jpg"), fit: BoxFit.cover)),
+          color: kAccentColor.withOpacity(0.10),
+          //decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/Cute Nurse.jpg"), fit: BoxFit.cover)),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
