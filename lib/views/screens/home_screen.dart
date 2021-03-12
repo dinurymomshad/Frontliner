@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Home", style: TextStyle(color: kPrimaryColor)),
+          title: Text("Home"),
           centerTitle: true,
           backgroundColor: kAccentColor,
           foregroundColor: kPrimaryColor,
